@@ -22,7 +22,7 @@ body{
     width: 100%;
     min-height: 100vh;
     text-align: center;
-    padding: 33px;
+    padding: 33px 0px;
     position: relative;
 }
 
@@ -237,27 +237,22 @@ th,td{
     }
 }
 @media (max-width: 430px){
-    .container_filter-search{
-        padding: 18px 0px;
+    .container_table{
+        width: 96%;
     }
 }
 @media (max-width: 375px){
-    .container_filter-search{
-        padding: 18px 0px;
-    }
-    .container_table{
-        width: 98%;
-    }
     .title{
         font-size: 50px;
+    }
+    .modal_img{
+        width: 60%;
+        height: 50%;
     }
 }
 @media (max-width: 340px){
     .container_filter-search{
         padding: 20px 0px;
-    }
-    .container_table{
-        width: 99%;
     }
     .container_search input{
         width: 90%;
