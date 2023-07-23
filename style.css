@@ -160,6 +160,7 @@ th,td{
 }
 
 .modal_info{
+    border: var(--border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -200,7 +201,6 @@ th,td{
         width: 90%;
     }
     .container_filter-search{
-
         flex-direction: column;
         justify-content: space-between;
         padding: 15px 0px;
@@ -246,8 +246,10 @@ th,td{
         font-size: 50px;
     }
     .modal_img{
-        width: 60%;
-        height: 50%;
+        width: 70%;
+    }
+    .modal_info{
+        height: 110px;
     }
 }
 @media (max-width: 340px){
