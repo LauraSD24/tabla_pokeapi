@@ -160,7 +160,6 @@ th,td{
 }
 
 .modal_info{
-    border: var(--border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
