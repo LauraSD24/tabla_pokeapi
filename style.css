@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./background_pokemon.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+:root{
+    --border: 1px solid black;
+    --font_title: 'Caprasimo', cursive;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 33px;
+    position: relative;
+}
+
+.img_background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.title{
+    margin-bottom: 30px;
+    color: black;
+    font-size: 60px;
+    background-color: rgb(201, 97, 97);
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+.container_table{
+    background-color: white;
+    width: 60%;
+    margin: 0px auto;
+    z-index: 100;
+}
+
+.container_filter-search{
+    border: var(--border);
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: .5px;
+    background-color: white;
+}
+
+.container_search input{
+    height: 20px;
+    padding-left: 3px;
+}
+
+.table_pokemons{
+    border: var(--border);
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    gap: 5px;
+    margin: 0px auto;
+}
+
+.name_table{
+    text-transform: capitalize;
+}
+
+th,td{
+    height: 40px;
+}
+
+.btn_table{
+    width: 60%;
+    height: 70%;
+    cursor: pointer;
+    background-color: rgba(100, 148, 237, 0.863);
+    background-color: rgb(211, 139, 139);
+    border: 2px solid rgba(0, 0, 0, 0.623);
+    font-weight: 600;
+}
+
+.btn_table:hover{
+    background-color: rgba(78, 132, 233, 0.863);
+    background-color: rgb(201, 97, 97);
+}
+
+.container_modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 35%;
+    height: 70%;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 15px;
+    gap: 20px;
+}
+
+.ocult{
+    display: none;
+}
+
+.modal_close{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font_title);
+    right: -13px;
+    top: -10px; 
+    color: white;
+    background-color: black;
+    padding: 6px 9px;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.modal_name{
+    font-family: var(--font_title);
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.modal_img{
+    border: 2px solid rgba(0, 0, 0, 0.678);
+    width: 50%;
+    height: 50%;
+    background-color: rgba(84, 240, 240, 0.329);
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.modal_info div{
+    display: flex;
+    gap: 25px;
+}
+
+.modal_info span{
+    font-weight: 200;
+}
+
+/*--------- Media Querys -------------*/
+
+@media (max-width: 1050px){
+    .container_table{
+        width: 80%;
+    }
+    .modal{
+        width: 45%;
+    }
+}
+@media (max-width: 820px){
+    .modal{
+        width: 67%;
+    }
+}
+@media (max-width: 650px){
+    .container_table{
+        width: 90%;
+    }
+}
+@media (max-width: 550px){
+    .container_table{
+        width: 90%;
+    }
+    .container_filter-search{
+
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 0px;
+        height: 100px;
+    }
+    .container_filter,
+    .container_search{
+        width: 80%;
+        height: 25px;
+    }
+    .container_search input{
+        height: 100%;
+        width: 80%;
+        padding-left: 3px;
+        margin-left: 10px;
+    }
+    .select_filter{
+        width: 100px;
+        margin-left: 10px;
+        height: 100%;
+
+    }
+    .modal{
+        width: 90%;
+    }   
+}
+@media (max-width: 480px){
+    .container_filter-search{
+        height: 130px;
+        padding: 25px 0px;
+    }
+    .container_search{
+        width: 90%;
+    }
+}
+@media (max-width: 430px){
+    .container_filter-search{
+        padding: 18px 0px;
+    }
+}
+@media (max-width: 375px){
+    .container_filter-search{
+        padding: 18px 0px;
+    }
+    .container_table{
+        width: 98%;
+    }
+    .title{
+        font-size: 50px;
+    }
+}
+@media (max-width: 340px){
+    .container_filter-search{
+        padding: 20px 0px;
+    }
+    .container_table{
+        width: 99%;
+    }
+    .container_search input{
+        width: 90%;
+        margin-left: 0px;
+    }
+}
